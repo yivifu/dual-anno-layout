@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>响应式HTML双行夹批排版</title>
+    <style>
+        * {
+            font-family: '霞鹜文楷红楼梦', system-ui;
+        }
+ 
+        :root {
+            --anno-scale: 0.6;
+        }
+
+        /* 文档内容容器 */
+        .story {
+            /* 两边留一点空白，方便少量内容溢出 */
+            width: 95%;
+            /* 整体页面居中 */
+            margin: 0 auto;
+            /* 溢出内容显示（默认值，可省略，但需确保未设为hidden） */
+            overflow: visible;
+        }
+
+        .replace {
+            color: green;
+        }
+        .deleted {
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        /* 不支持JS时双行夹注显示样式 */
+        .annotation {
+            display: inline;
+            font-size: max(calc(1em * var(--anno-scale)), 0.6em);
+            color: blue;
+            margin: 1px;
+            background-color: rgba(210, 105, 30, 0.08);
+            border-radius:3px;
+        }
+    </style>
+</head>
+ 
+<body>
+<div class="story" id="story">
+    <h3>第二回 贾夫人仙逝扬州城 冷子兴演说荣国府</h3>
+    <p class="zhi-note  dual-layout">&ensp;&ensp;&ensp;&ensp;
+        <span class="annotation"><strong>【甲戌】</strong>此回亦非正文，本旨只在冷子兴一人，即俗谓“冷中出热，无中生有”也。其演说荣府一篇者，盖因族大人多，若从作者笔下一一叙出，尽一二回不能得明，则成何文字？故借用冷子一人，略出其大半，使阅者心中，已有一荣府隐隐在心，然后用黛玉、宝钗等两三次皴染，则耀然于心中眼中矣。此即画家三染法也。
+    </span></p>
+    <p class="zhi-note  dual-layout">&ensp;&ensp;&ensp;&ensp;
+        <span class="annotation">未写荣府正人，先写外戚，是由远及近、由小至大也。若使先叙出荣府，然后一一叙及外戚，又一一至朋友、至奴仆，其死板拮据之笔，岂作“十二钗”人手中之物也？今先写外戚者，正是写荣国一府也。故又怕闲文赘累，开笔即写贾夫人已死，是特使黛玉入荣之速也。通灵宝玉于士隐梦中一出，今于子兴口中一出，阅者已洞然矣。然后于黛玉、宝钗二人目中极精极细一描，则是文章锁合处。盖不肯一笔直下，有若放闸之水、燃信之爆，使其精华一泄而无馀也。究竟此玉原应出自钗、黛目中，方有照应。今预从子兴口中说出，实虽写而却未写。观其后文可知。此一回<span class="deleted">[又]</span><span class="replace">[文]</span>则是虚敲傍击之文，笔则是反逆隐回之笔。</span></p>
+    <p class="zhi-note dual-layout">
+        &ensp;&ensp;&ensp;&ensp;<span class="annotation"><strong>【戚】</strong>以百回之大文，先以此回作两大笔以冒之，诚是大观。世态人情，尽盘旋于其间，而一丝不乱，非具龙象力者，其孰能哉？
+    </span></p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;诗云：<span class="annotation"><strong>【甲戌夹】</strong>只此一诗便妙极！此等才情，自是雪芹平生所长，余自谓评书，非关评诗也。</span>
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;一局输赢料不真，香销茶尽尚逡巡。</p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;欲知目下兴衰兆，须问旁观冷眼人<a href="#ch002note01"
+                                                                                   id="ref_ch002note01"><sup>[1]</sup></a>。<span
+            class="annotation"><strong>【甲戌眉】</strong>故用冷子兴演说。</span></p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;却说封肃因听见公差传唤，忙出来陪笑启问。那些人只嚷：“快请出甄爷来！”<span
+            class="annotation"><strong>【甲戌侧】</strong>一丝不乱。</span>封肃忙陪笑道：“小人姓封，并不姓甄<span class="annotation"><strong>假</strong></span>。只有当日小婿姓甄，今已出家一二年了，不知可是问他？”那些公人道：“我们也不知什么‘真’‘假’，<span
+            class="annotation"><strong>【甲戌侧】</strong>点睛妙笔。</span>因奉太爷之命来问。他既是你女婿，便带了你去亲见太爷面禀，省得乱跑。”说着，不容封肃多言，大家推拥他去了。封家人各各惊慌，不知何兆。
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;那天约有二更时分，只见封肃方回来，<sup style="color: red;">测试一下，如果有一条非常长的上标效果会怎么样，验证type&ensp;===&ensp;'element'的处理逻辑。测试一下，如果有一条非常长的上标效果会怎么样，验证type&ensp;===&ensp;'element'的处理逻辑。<strong>测试一下，如果有一条非常长的上标效果会怎么样，验证<i>type&ensp;<strong>===</strong>&ensp;'element'</i>的处理逻辑。</strong>测试一下，如果有一条非常长的上标效果会怎么样，验证type&ensp;===&ensp;'element'的处理逻辑。</sup>欢天喜地。<span
+            class="annotation"><strong>【甲戌侧】</strong>出自封肃口内，便省却多少闲文。</span>众人忙问端的。他乃说道：“原来本府新升的太爷，姓贾名化，本胡州人氏，曾与女婿旧日相交。<span
+            class="annotation"><strong>【蒙侧】</strong>世态精神，叠露于数语间。</span>方才在咱门前过去，因看见娇杏<span
+            class="annotation"><strong>【甲戌侧】</strong>侥幸也。◇托言当日丫头回顾，故有今日，亦不过偶然侥幸耳，非真实得尘中英杰也。非近日小说中满纸红拂紫烟之可比。<strong>【甲戌眉】</strong>余批重出。余阅此书，偶有所得，即笔录之。非从首至尾阅过复从首加批者，故偶有复处。且诸公之批，自是诸公眼界；脂斋之批，亦有脂斋取乐处。后每一阅，亦必有一语半言，重加批评于侧，故又有于前后照应之说等批。</span><a
+            href="#ch002note02" id="ref_ch002note02"><sup>[2]</sup></a>那丫头买线，所以他只当女婿移住于此。我一一将原故回明，那太爷倒伤感叹息了一回。又问外孙女儿，<span
+            class="annotation"><strong>【甲戌侧】</strong>细。</span>我说看灯丢了。太爷说：‘不妨，我自使番役务必采访回来。’<span
+            class="annotation"><strong>【甲戌侧】</strong>为葫芦案伏线。</span>说了一回话，临走倒送了我二两银子。”<span
+            class="annotation"><strong>【蒙侧】</strong>此事最要紧。</span>甄家娘子听了，不免心中伤感。<span
+            class="annotation"><strong>【甲戌侧】</strong>所谓“旧事凄凉不可闻”也。</span>一宿无话。</p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;至次日，早有雨村遣人送两封银子、四匹锦缎，答谢甄家娘子，<span
+            class="annotation"><strong>【甲戌侧】</strong>雨村已是下流人物，看此，今之如雨村者亦未有矣。</span>又寄一封密书与封肃，转托他向甄家娘子要那娇杏作二房。<span
+            class="annotation"><strong>【甲戌侧】</strong>谢礼却为此。险哉，人之心也！</span>封肃喜得屁滚尿流，巴不得去奉承，便在女儿前一力撺掇成了，<span
+            class="annotation"><strong>【甲戌侧】</strong>一语道尽。</span>乘夜只用一乘小轿，便把娇杏送进去了。雨村欢喜自不必说。<span
+            class="annotation"><strong>【蒙侧】</strong>知己相逢，得遂平生，一大快事。</span>乃封百金赠封肃，外又谢甄家娘子许多物事，令其好生养赡，以待寻访女儿下落。<span
+            class="annotation"><strong>【甲戌侧】</strong>找前伏后。</span>封肃回家无话。<span class="annotation"><strong>【甲戌侧】</strong>士隐家一段小荣枯至此结住，所谓“真不去，假焉来”也！</span>
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;却说娇杏这丫鬟，便是那年回顾雨村者。因偶然一顾，便弄出这段事来，亦是自己意料不到之奇缘。<span
+            class="annotation"><strong>【甲戌侧】</strong>注明一笔，更妥当。<strong>【蒙侧】</strong>点出情事。</span>谁想他命运两济，<span
+            class="annotation"><strong>【甲戌眉】</strong>好极！与英莲“有命无运”四字遥遥相映射。莲，主也；杏，仆也。今莲反无运，而杏则两全，可知世人原在运数，不在眼下之高低也。此则大有深意存焉。</span>不承望自到雨村身边，只一年便生了一子，又半载，雨村嫡妻忽染疾下世，雨村便将他扶册作正室夫人了。正是<a
+            href="#ch002note03" id="ref_ch002note03"><sup>[3]</sup></a>：
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;偶因一着错，<span class="annotation"><strong>【甲戌侧】</strong>妙极！盖女儿原不应私顾外人之谓。</span>
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;便为人上人。<span class="annotation"><strong>【甲戌侧】</strong>更妙！可知守礼俟命者终为饿莩。其调侃寓意不小。<strong>【甲戌眉】</strong>从来只见集古、集唐等句，未见集俗语者。此又更奇之至！</span>
+    </p>
+    <p class="dual-layout">
+        &ensp;&ensp;&ensp;&ensp;原来，雨村因那年士隐赠银之后，他于十六日便起身入都。至大比之期，不料他十分得意，已会了进士，选入外班，今已升了本府知府。虽才干优长，未免有些贪酷之弊，且又恃才侮上，那些官员皆侧目而视。<span
+            class="annotation"><strong>【甲戌侧】</strong>此亦奸雄必有之理。</span>不上一年，便被上司寻了个空隙，作成一本，参他“生情狡猾，擅纂礼仪<a
+            href="#ch002note04"
+            id="ref_ch002note04"><sup>[4]</sup></a>，且沽清正之名，而暗结虎狼之属，致使地方多事，民命不堪”<span
+            class="annotation"><strong>【甲戌侧】</strong>此亦奸雄必有之事。</span>等语。龙颜大怒，即批革职。<span
+            class="annotation"><strong>【蒙侧】</strong>罪重而法轻，何其幸也。</span>该部文书一到，本府官员无不喜悦。那雨村心中虽十分惭恨，却面上全无一点怨色，仍是喜悦自若。<span
+            class="annotation"><strong>【甲戌侧】</strong>此亦奸雄必有之态。</span>交代过公事，将历年做官积的些资本并家小人属送至原籍，安排妥协，<span
+            class="annotation"><strong>【甲戌侧】</strong>先云“根基已尽”，故今用此四字，细甚！</span>却又自己担风袖月，游览天下胜迹。<span
+            class="annotation"><strong>【甲戌侧】</strong>已伏下至金陵一节矣。</span></p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;那日，偶又游至维扬地面，因闻得今岁鹾<a href="#ch002note05"
+                                                                                        id="ref_ch002note05"><sup>[5]</sup></a>政点的是林如海。这林如海姓林名海，表字如海。<span
+            class="annotation"><strong>【甲戌侧】</strong>盖云“学海文林”也。总是暗写黛玉。</span>乃是前科的探花，今已升至兰台寺大夫<a
+            href="#ch002note06"
+            id="ref_ch002note06"><sup>[6]</sup></a>，<span class="annotation"><strong>【甲戌眉】</strong>官制半遵古名亦好。余最喜此等半有半无，半古半今，事之所无，理之必有，极玄极幻，荒唐不经之处。</span>本贯姑苏<span
+            class="annotation"><strong>【甲戌侧】</strong>十二钗正出之地，故用真。</span>人氏，今钦点出为巡盐御史，到任方一月有馀。
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;原来这林如海之祖，曾袭过列侯<a href="#ch002note07"
+                                                                                 id="ref_ch002note07"><sup>[7]</sup></a>，今到如海，业经五世。起初时，只封袭三世，因当今隆恩盛德，远迈前代，<span
+            class="annotation"><strong>【甲戌眉】</strong>可笑近时小说中，无故极力称扬浪子淫女，临收结时，还必致感动朝廷，使君父同入其情欲之界，明遂其意，何无人心之至！不知彼作者有何好处，有何谢报到朝廷廊庙之上，直将半生淫朽，秽渎睿聪，又苦拉君父作一干证护身符，强媒硬保，得遂其淫欲哉！</span>额外加恩，至如海之父，又袭了一代；至如海，便从科第出身。虽系钟鼎之家，却亦是书香<span
+            class="annotation"><strong>【甲戌侧】</strong>要紧二字，盖钟鼎亦必有书香方至美。</span>之族<a
+            href="#ch002note08"
+            id="ref_ch002note08"><sup>[8]</sup></a>。只可惜这林家支庶不盛，子孙有限，虽有几门，却与如海俱是堂族而已，没甚亲支嫡派的<a
+            href="#ch002note09"
+            id="ref_ch002note09"><sup>[9]</sup></a>。<span class="annotation"><strong>【甲戌侧】</strong>总为黛玉极力一写。</span>今如海年已四十，只有一个三岁之子，偏又于去岁死了。虽有几房姬妾，<span
+            class="annotation"><strong>【甲戌侧】</strong>带写贤妻。</span><a href="#ch002note10"
+                                                                           id="ref_ch002note10"><sup>[10]</sup></a>奈他命中无子，亦无可如何之事。今只有嫡妻贾氏，生得一女，乳名黛玉，<span
+            class="annotation"><strong>【蒙侧】</strong>绛珠初见。</span>年方五岁。夫妻无子，故爱女如珍，且又见他聪明清秀，<span
+            class="annotation"><strong>【甲戌侧】</strong>看他写黛玉，只用此四字。可笑近来小说中，满纸“天下无二”“古今无双”等字。</span>便也欲使他读书识得几个字，不过假充养子之意，聊解膝下荒凉之叹。<span
+            class="annotation"><strong>【甲戌眉】</strong>如此叙法，方是至情至理之妙文。最可笑者，近小说中满纸班昭蔡琰、文君道韫。</span>
+    </p>
+    <p class="dual-layout">
+        &ensp;&ensp;&ensp;&ensp;雨村正值偶感风寒，病在旅店，将一月光景方渐愈。一因身体劳倦，二因盘费不继，也正欲寻个合式之处，暂且歇下。幸有两个旧友，亦在此境居住，<span
+            class="annotation"><strong>【甲戌侧】</strong>写雨村自得意后之交识也。◇又为冷子兴作引。</span>因闻得鹾政欲聘一西宾，雨村便相托友力，谋了进去，且作安身之计。妙在只一个女学生，并两个伴读丫鬟，这女学生年又极小，身体又极怯弱，工课不限多寡，故十分省力。
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;堪堪又是一载的光阴，谁知女学生之母贾氏夫人一疾而终。女学生侍汤奉药，守丧尽哀，<span
+            class="annotation"><strong>【蒙侧】</strong>先要使黛玉哭起。</span>遂又将要辞馆别图。林如海意欲令女守制读书，故又将他留下。近因女学生哀痛过伤，本自怯弱多病的，<span
+            class="annotation"><strong>【甲戌侧】</strong>又一染。</span>触犯旧症，遂连日不曾上学。<span
+            class="annotation"><strong>【甲戌眉】</strong>上半回已终，写“仙逝”正为黛玉也。故一句带过，恐闲文有妨正笔。</span>
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;雨村闲居无聊，每当风日晴和，饭后便出来闲步。这日，偶至郭外，意欲赏鉴那村野风光。<span
+            class="annotation"><strong>【甲戌眉】</strong>大都世人意料此，终不能此；不及彼者，而反及彼.故特书意在村野风光，却忽遇见子兴，一篇荣国繁华气象。</span>忽信步至一山环水旋、茂林深竹之处，隐隐有座庙宇，门巷倾颓，墙垣朽败，门前有额，题着“智通寺”三字，<span
+            class="annotation"><strong>【甲戌侧】</strong>谁为智者？又谁能通？一叹。</span>门旁又有一副旧破的对联，曰：</p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;身后有馀忘缩手，眼前无路想回头。<span
+            class="annotation"><strong>【甲戌夹】</strong>先为宁、荣诸人当头一喝，却是为余一喝。</span>
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;雨村看了，因想到：“这两句话，文虽浅，其意则深。<span
+            class="annotation"><strong>【甲戌侧】</strong>一部书之总批。</span>也曾游过些名山大刹，倒不曾见过这话头<a
+            href="#ch002note11"
+            id="ref_ch002note11"><sup>[11]</sup></a>，其中想必有个翻过筋斗来的亦未可知，<span class="annotation"><strong>【甲戌侧】</strong>随笔带出禅机，又为后文多少语录不落空。</span>何不进去试试？”想着，走入看时，只有一个聋肿<a
+            href="#ch002note12"
+            id="ref_ch002note12"><sup>[12]</sup></a>老僧在那里煮粥。<span class="annotation"><strong>【甲戌侧】</strong>是雨村火气。</span>雨村见了，便不在意。<span
+            class="annotation"><strong>【甲戌侧】</strong>火气。</span>及至问他两句话，那老僧既聋且昏，<span
+            class="annotation"><strong>【甲戌侧】</strong>是翻过来的。<strong>【蒙侧】</strong>欲写冷子兴，偏闲闲有许多着力语。</span>齿落舌钝，<span
+            class="annotation"><strong>【甲戌侧】</strong>是翻过来的。</span>所答非所问<a href="#ch002note13"
+                                                                                       id="ref_ch002note13"><sup>[13]</sup></a>。
+    </p>
+    <p class="dual-layout">&ensp;&ensp;&ensp;&ensp;雨村不耐烦，便仍出来，<span
+            class="annotation"><strong>【甲戌眉】</strong>毕竟雨村还是俗眼<a href="#ch002note08"
+                                                                           id="ch002note156"><sup>[156]</sup></a>，只能识得阿凤、宝玉、黛玉等未觉之先，却不识得既证之后。◇未出宁、荣繁华盛处，却先写一荒凉小境；未写通部入世迷人，却先写一出世醒人。回风舞雪，倒峡逆波，别小说中所无之法。</span><a
+            href="#ch002note14"
+            id="ref_ch002note14"><sup>[14]</sup></a>意欲到那村肆中沽酒三杯，以助野趣。于是款步行来，刚入肆门，只见座上吃酒之客有一人起身大笑，接了出来，口内说：“奇遇，奇遇！”雨村忙看时，此人是都中古董行中贸易的号冷子兴
+</div>
+<hr/>
+<div class="note-block">
+    <aside class="comment" id="ch002note01"><a href="#ref_ch002note01">[1]</a>揭示此书主题在写贾府兴衰原因。所谓齐家治国平天下，家就是规模极小的国，所以政治索隐派很容易从此书中的人事联想到历史人物事件。然而此书真正的价值正如此回回前小序所评，在于其艺术手法之妙。若当作历史影射，则不过含糊其词的崩坏之作，尚不及野史笔记。
+    </aside>
+    <aside class="comment" id="ch002note02"><a href="#ref_ch002note02">[2]</a>如今归为脂批的署名者除了脂砚斋外，实际署名还有畸笏叟、梅溪、松斋、立松轩等。否定脂批真实性的人士，却没法解释伪造脂批何以要伪造这么多人。此处雨村差人来找封肃时他的惊慌以及得知雨村用意后的惊喜，与16回夏太监传旨贾元春才选凤藻宫可为镜像。
+    </aside>
+    <aside class="comment" id="ch002note03"><a href="#ref_ch002note03">[3]</a>写完一段故事然后用“正是”引出若干诗句作结，是中国古典小说经常使用的一种套路，但是这本书前八十回里这种套路留下来的不多，应当是作者在多次修改过程中进行了一些系统的删除。程本后四十回这种套路比较多，有人根据这个套路的痕迹判断后四十回中有些内容应当出自曹雪芹原稿，如周绍良。不少人认为红楼梦全书的初稿应该是大体完成了的(只是局部缺些诗文)，但只有前八十回完成了五次增删，而八十回后因未完成增删而没有系统誊清流传或稿件丢失(如卫若兰射圃等)导致成为佚稿。周绍良等根据周春《阅〈红楼梦〉随笔》（成书约1794~1795年，在程本1791年刊刻之后）中“雁隅以重价购抄本两部，一为《石头记》八十回，一为《红楼梦》一百二十回。”的记载，认为程本后四十回的回目都是由曹雪芹最后改定的，而缺少的前八十回脂批提到的回目如“花袭人有始有终”等，都是曹雪芹打算删除的。考虑脂砚斋与曹雪芹的密切关系，程本后四十回回目由曹雪芹拟定不可信。
+    </aside>
+    <aside class="comment" id="ch002note04"><a href="#ref_ch002note04">[4]</a>擅自注释整理《周礼》、《仪礼》二书。明清属大罪。雍正时谢济世擅自注释《大学》、《中庸》，为人参奏，雍正判谢济世斩决，后从宽免死，发军前效力。雨村胆大如此，所以脂批多次说他奸雄，且书中明说他“暗结虎狼之属”，八十回后可能有更大逆举以致覆灭。
+    </aside>
+    <aside class="comment" id="ch002note05"><a href="#ref_ch002note05">[5]</a>音cuó。鹾政，盐政，即巡盐御史所主政务。明清有巡盐御史，明以监察御史(正七品)充任，清康熙以后从内务府或出身内务府官员中选任，品级一依原官，往往为皇帝私人。
+    </aside>
+    <aside class="comment" id="ch002note06"><a href="#ref_ch002note06">[6]</a>兰台，东汉后御史台(明以后改都察院)的代称。唐曾称秘书丞为兰台大夫，从五品。若认为是都察院御史，明清官阶为正七品。如海点了鹾政，是肥差，一般为皇帝亲信担任。
+    </aside>
+    <aside class="comment" id="ch002note07"><a href="#ref_ch002note07">[7]</a>列侯，古代爵位名，始见于战国。秦称彻侯，居二十等爵制之首。隋后消亡，但“列侯”一词仍泛指封侯者。林家应是护官符中没列出来的金陵大家族之一（因黛玉在金陵十二钗之首，故如海虽然是姑苏人氏，列为金陵大家族当无不妥）。
+    </aside>
+    <aside class="comment" id="ch002note08"><a href="#ref_ch002note08">[8]</a>贾家至文字辈，贾敬中进士，贾政也与读书人交好且督促宝玉贾兰读书，说明贾家的理想，就是成为林家这样的书香门第，这可能也是贾敏如海联姻的原因之一。
+    </aside>
+    <aside class="comment" id="ch002note09"><a href="#ref_ch002note09">[9]</a>这是如海将黛玉送入贾府的主因。否则如海下世，黛玉只有受堂族挟制，无可如何了。有人说
+        “失母长女”有干娶妇的忌讳才是如海才送走黛玉的原因。一则这个忌讳未必被普遍认可，再则中国很多忌讳民间都未必严格执行，何况黛玉大家之女，自有庶母奶娘嬷嬷照管教育，并不完全依赖母教，再说若为“失母长女”有干娶妇忌讳的缘故，如海与其送走黛玉，还不如扶正一房姬妾省事，故此说并不可取。
+    </aside>
+    <aside class="comment" id="ch002note10"><a href="#ref_ch002note10">[10]</a>这则脂批说明依据书中时代的价值观，丈夫姬妾多是贤妻的标志。所以凤姐是不贤之人，黛玉礼待袭人，是侧写黛玉之贤，而宝钗、湘云与袭人地位不同，不可能做宝玉的侧室，黛玉吃她们的醋倒说不上不贤。
+    </aside>
+    <aside class="comment" id="ch002note11"><a href="#ref_ch002note11">[11]</a>“话头”是禅宗术语，指禅宗用以启迪信众开悟的话语或问题，通常是一些具有启发性、难以用常规思维理解的语句或概念。
+    </aside>
+    <aside class="comment" id="ch002note12"><a href="#ref_ch002note12">[12]</a><span class="wu-note">吴注：</span>“聋肿”，诸本用字略有不同，现代整理本多依庚、舒本改作“龙钟”。按此处对老僧的描写是针对雨村看了对联后的想法作一反跌，有讽刺意味，似以带贬义的“聋肿”为是。
+    </aside>
+    <aside class="comment" id="ch002note13"><a href="#ref_ch002note13">[13]</a>玩味此处脂批，似指这老僧是作者自画像，只是
+        “既聋且昏”是“翻过来的”，即作者是明敏之人。敦诚《挽曹雪芹》称“四十萧然太瘦生”、“四十年华付杳冥”、“肠回故垅孤儿泣,泪迸荒天寡妇声”，裕瑞《枣窗闲笔》说“其人身胖头广而色黑”，张宜泉《伤芹溪居士》指“年未五旬而卒”，以上诗文中曹雪芹胖瘦、享年各不相同，且死时有妻(还是新妇)有子，并不与这里的作者形象相同，因此断言此书作者曹雪芹就是曹寅子孙曹雪芹，实有尚未克服的矛盾。
+    </aside>
+    <aside class="comment" id="ch002note14"><a href="#ref_ch002note14">[14]</a>需注意上一段多则及此则脂批。这聋肿的老僧，即是既证的宝玉，也是作者自画像。单从作文论，就删去智通寺这段文字也无妨，脂批称“回风舞雪，倒峡逆波”，并非说此段文字从写文章的角度来说不可删除，而是说作者在以雨村短暂穿越的这个未来幻境将结局先写了出来。作者惜字如金，此书中从行文看无必要而偏费笔墨写出的文字，大多另含深意。
+    </aside>
+</div>
+<script src="DualAnnoLayout.js"></script>
+<script>
+window.onload = () => {
+    // 页面加载完成后，一次对所有 class 为 dual-layout 的标签重排为双行合一，适用于大多数情况
+    //DualAnnoLayout.activate('.dual-layout', {minAnnoChars:4,});
+    // 一次性重排行数过多导致页面加载耗时过久，可改用通过视口监听器仅在需要重排的内容进入视口时才重排
+    const observer = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) {
+            if (!e.target.DualAnnoLayout) {
+                e.target.DualAnnoLayout = new DualAnnoLayout(e.target, {minAnnoChars:4,});
+                e.target.DualAnnoLayout.render();
+            } else {
+                e.target.DualAnnoLayout.render();
+            }
+        }
+    }));
+    document.querySelectorAll('.dual-layout').forEach(el => observer.observe(el));
+
+}
+</script>
+</body>
+ 
+</html>
